@@ -72,6 +72,7 @@ You may want to use hie-wrapper. Check the README for more information
 in stack.yaml schreiben:
 # resolver: lts-15.4
 resolver: lts-14.20
+>stack build ladet diese Version ghc8.6.5 auf AppData\Local\Programs\stack\x86_64-windows
 
 -- neue Fehlermeldung:
 Cannot satisfy ...
