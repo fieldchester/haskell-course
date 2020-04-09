@@ -49,7 +49,7 @@ Ordner des eben erstellten Projektes öffnen und in src/ oder lib/ eine
 Mismatching GHC versions: Stack project is 8.8.3, HIE is 8.6.5
 You may want to use hie-wrapper. Check the README for more information
 
-in stack.yaml schreiben:
+stack.yaml:  
 #&#8203;resolver: lts-15.4 <!-- !#8203; zero with space -->  
 resolver: lts-14.20  
 >stack build ladet diese Version (ghc-8.6.5) auf AppData\Local\Programs\stack\x86_64-windows
