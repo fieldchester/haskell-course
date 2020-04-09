@@ -1,53 +1,35 @@
+# GHC und GHCI mit Windows10/GitBash/Stack
 
-
-
-
-
-GHC und GHCI mit Windows10/GitBash
---------------------------------
---------------------------------
-
-
-Installation
-------------
+## Installation
 Stack installiert auf Windows
-C:\sr und
-C:\Users\user\AppData\
+- C:\sr und
+- C:\Users\user\AppData\
 
 
-GHCI
-----
-Windows GitBash> stack exec ghci
+## GHCI
+Windows GitBash> stack exec ghci oder stack ghci
 
-GHC - script
-------------
-> stack runghc file.hs
+## Script
+> stack exec runghc file.hs oder stack runghc file.hs
 
-GHC - program
--------------
-> stack new name new-template; cd name
-> stack build
-> make changes to hs-files in app/ und src/
-> stack build
-> stack exec name-exe
+## Projekt
+stack new name new-template; cd name
+stack build
+make changes to hs-files in app/ und src/
+stack build
+stack exec name-exe
 
 
 
+# Haskell-IDE-Engine mit Windows/VSCode
 
-
-Haskell-IDE-Engine mit Windows/VSCode
--------------------------------------
--------------------------------------
-
-
-Installation
-------------
+## Installation
 https://github.com/alanz/vscode-hie-server, using stack
 dauerte mehrere Stunden
 
 installiert HIE auf Windows
-C:\hie
-C:\Users\user\AppData\
+- C:\hie
+- C:\Users\user\AppData\
 
 In VSCode die Extension Haskell Language Server aktivieren
 
@@ -55,26 +37,24 @@ VSCode Settings: Language Server Haskell > Trace:Server      auf verbose stellen
 denn bei mir gabes einige Hürden
 
 
-GHC - program
--------------
-
+##Verwendung
 Neues Projekt erstellen mit GitBash und stack, siehe oben
 
->code		Es öffnet sich VSCode
+>code		Es öffnet sich VSCode.
 
 Ordner des eben erstellten Projektes öffnen und in src/ oder lib/ eine
 	hs-Datei anklicken, dann sollte alles functionieren aber:
 
--- Fehlermeldung:
+###Fehlermeldung:
 Mismatching GHC versions: Stack project is 8.8.3, HIE is 8.6.5
 You may want to use hie-wrapper. Check the README for more information
 
 in stack.yaml schreiben:
-# resolver: lts-15.4
+#&#8203;resolver: lts-15.4 <!-- !#8203; zero with space -->
 resolver: lts-14.20
->stack build ladet diese Version ghc8.6.5 auf AppData\Local\Programs\stack\x86_64-windows
+>stack build ladet diese Version (ghc-8.6.5) auf AppData\Local\Programs\stack\x86_64-windows
 
--- neue Fehlermeldung:
+###neue Fehlermeldung:
 Cannot satisfy ...
 VSCode schließen und in GitBash "code" eingeben
 
@@ -82,16 +62,9 @@ Hoover funktioniert, dauert aber
 
 
 
+#Haskell-IDE-Engine mit Debian/WSL VSCode
 
-
-
-
-Haskell-IDE-Engine mit Debian/WSL VSCode
-----------------------------------------
-----------------------------------------
-
-Installation
-------------
+##Installation
 WSL
 Debian
 cabal und gch über downloads.haskell.org/debian
@@ -114,40 +87,3 @@ Besser dürfte Dual Boot sein.
 
 Bleibe daher zum Compilieren bei Windwos.
 Für die Paketerstellung mit NIX wechsle ich auf Debian/WSL
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
