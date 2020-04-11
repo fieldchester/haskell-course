@@ -14,6 +14,8 @@ res = [0,1,2,3] >>= ( \x ->
 res1 = [0,1,2,3] >>= ( \x -> 
  flip fmap [0,1]  (\y ->
           x  +y)  ) -- schneller, da kein return
+          
+ -- Antwort: Da kann nichts mehr angehängt werden
 
 -- Frage 2
 -- -------
@@ -23,19 +25,12 @@ res1 = [0,1,2,3] >>= ( \x ->
 -- compiler error: exprected Tyep [a] found ()
 
 
+
+
 -- Fragen - Ende
 -- -------------
 -- -------------
 
-
-
-main :: IO ()
-main = someFunc -- HIE functioniert nur, wenn mindestens einmal compiliert
-
-someFunc :: IO ()
-someFunc = putStrLn "Hello, type in your name"  >> 
-           getLine                              >>= \name -> 
-           putStrLn $ "Hey" ++ name
 
 
 -- flip fmap mit ()
