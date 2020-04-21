@@ -87,3 +87,9 @@ Besser dürfte Dual Boot sein.
 
 Bleibe daher zum Compilieren bei Windwos.
 Für die Paketerstellung mit NIX wechsle ich auf Debian/WSL
+
+### fdlock Fehlermeldungen
+Diese sind unter anderem auch aufgetaucht und scheinen entscheidend zu sein.
+Sie sollen nur bei WSL 1 auftreten, WSL 2 ist erst ab windows build 18917 erhältlich.
+Dieses ist vorab mit der Gefahr des Garantieverlustes downloadbar (Windwos Insider Programm).
+
