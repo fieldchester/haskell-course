@@ -1,4 +1,4 @@
 # haskell-lectures
-- 01hie.md  Haskell-Ide-Engine and tools
-- c03/app   Question about IO ()
-- c05       server
+- 01hie.md    Haskell-Ide-Engine and tools
+- c03/app    Question about IO ()
+- c05        server
